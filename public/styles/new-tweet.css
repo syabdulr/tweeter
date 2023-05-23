@@ -31,7 +31,6 @@
   background-color: transparent;
 }
 
-
 .new-tweet button[type="submit"] {
   background-color: #4056A1;
   color: white;
@@ -52,4 +51,8 @@
   font-size: 14px;
   color: #999;
   margin-top: 5px;
+}
+
+.new-tweet .counter.invalid {
+  color: red;
 }
