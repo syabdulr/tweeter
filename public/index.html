@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- /tweets to access images https://i.imgur.com/73hZDYK.png -->
 <!-- http://localhost:8080/ URL LINK TO SERVER -->
 
 <head>
@@ -26,7 +26,8 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
 
 
 
@@ -55,7 +56,7 @@
     </div>
     <br>
     <div>
-      <h2>Your Name</h2>
+      <h2><strong>Amy</strong> Mansell</h2>
     </div>
   </header>
 
@@ -64,16 +65,40 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
+        <style>
+          .tweet::placeholder {
+            font-weight: bold;
+          }
+        </style> <!-- Make placeholder text bold -->
+        <textarea name="text" placeholder="What are you humming about?" class="tweet" id="tweet-text"></textarea>
         <div>
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
+    <section class="tweet-container">
+      <article class="tweet">
+        <div class="tweet-header">
+          <div class="icon-container">
+            <img src="https://i.imgur.com/73hZDYK.png">
+            <div class="username">Isaac Newton</div>
+          </div>
+          <div class="handle">@isaacnewton</div>
+        </div>
+        <p class="tweet-content">Practise makes perfect</p>
+        <footer class="tweet-footer">
+          <div class="time-ago">10 days ago</div>
+          <div class="tweet-actions">
+            <i class="fa fa-flag"></i>
+            <i class="fa fa-retweet"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
   </main>
 </body>
+
 </html>
