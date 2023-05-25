@@ -1,8 +1,12 @@
+/* Top Nav Bar */
+
+/* Website Display */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 120px;
+  height: 7.5rem; /* 120px is typically 7.5rem, if the default root font-size is 16px */
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -14,7 +18,7 @@ nav {
 
 nav span {
   font-family: "Bungee", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px is typically 1.5rem, if the default root font-size is 16px */
 }
 
 .right-content {
@@ -25,11 +29,12 @@ nav span {
 
 .prompt-tweet {
   font-family: "Source Sans Pro";
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; /* 5px is typically 0.3125rem, if the default root font-size is 16px */
 }
 
 .fa-angle-double-down {
-  font-size: 24px;
+  font-size: 1.5rem;  
   color: red;
-  margin-right: 100px;
+  margin-right: 4.25rem;  
 }
+

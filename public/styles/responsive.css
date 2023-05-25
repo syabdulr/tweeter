@@ -1,0 +1,64 @@
+/* Responsive.css */
+
+/* Mobile */
+@media (max-width: 48rem) { /* 767px is typically 48rem, if the default root font-size is 16px */
+  nav {
+    background-color: #c29200;
+    padding: 0 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
+    height: 3.75rem; /* reducing the height on mobile */
+  }
+  nav span {
+    text-align: center;
+    font-size: 1.25rem; /* reducing the font size on mobile */
+  }
+  .right-content {
+    margin-top: 1.5rem;
+    flex-direction: column;
+    align-items: center; /* centering the content on mobile */
+  }
+  .fa-angle-double-down {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem; /* reducing the font size on mobile */
+  }
+  .new-tweet, #tweets-container {
+    max-width: 100%;
+    padding: 0 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
+    flex-direction: column;
+  }
+  .prompt-tweet {
+    margin-bottom: 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .new-tweet, #tweets-container {
+    padding: 0 15px; /* Adjust the side padding */
+  }
+}
+
+
+/* CSS Adjustments for better responsiveness */
+.new-tweet form, .tweet-footer {
+  justify-content: space-between; 
+  flex-wrap: wrap; /* Allow items to wrap to a new line if there isn't enough space */
+}
+
+.new-tweet button[type="submit"], .tweet-footer .tweet-actions {
+  margin-top: 10px; /* Provide some vertical space when items wrap to a new line */
+}
+
+.tweet .icon-container, .tweet-footer {
+  align-items: flex-start; /* Align items to the start of their container to prevent vertical misalignment */
+}
+
+.tweet .icon-container img {
+  margin-right: 10px; /* Provide some horizontal space between image and username */
+}
+
+.tweet-content {
+  margin-bottom: 10px; /* Provide some vertical space between content and footer */
+}
+
+

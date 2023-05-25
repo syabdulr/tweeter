@@ -1,8 +1,15 @@
+/* Tweet Container */
+
 .tweet {
   border: 2px solid black;
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.tweet::placeholder {
+  font-weight: bold;
+}
+
 
 .tweet-actions {
   color: #4056A1;
@@ -50,4 +57,11 @@
 
 .tweet .fa:hover {
   color: #b8c338;
+}
+
+.error-container {
+  color: red;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.1em;
 }

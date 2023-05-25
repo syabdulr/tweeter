@@ -1,5 +1,9 @@
+/* New Tweet */
+
 .tweet {
   background-color: #f2f2f2;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .new-tweet {
@@ -40,11 +44,15 @@
   font-size: 14px;
   cursor: pointer;
   font-family: "Bungee", sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .new-tweet button[type="submit"]:hover {
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .new-tweet .counter {
