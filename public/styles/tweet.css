@@ -13,11 +13,12 @@
 
 
 .tweet-actions {
-  color: #4056A1; /* This sets the color of the tweet actions (e.g., like, reply) to #4056A1 */
+  color: #4056A1; /* This sets the color to #4056A1 */
 }
 
 .tweet-content {
-  border-bottom: 2px solid black; /* This adds a bottom border with a thickness of 2px to the tweet content */
+  border-bottom: 2px solid black; 
+  /* This adds a bottom border with a thickness of 2px to the tweet content */
 }
 
 .tweet .username {
