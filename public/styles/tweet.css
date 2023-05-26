@@ -1,67 +1,65 @@
 /* Tweet Container */
 
 .tweet {
-  border: 2px solid black;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 2px solid black; /* This adds a black border with a thickness of 2px to the tweet */
+  padding: 10px; /* This adds 10px of padding inside the tweet */
+  margin-bottom: 10px; /* This adds a bottom margin of 10px to the tweet, creating spacing between tweets */
+  word-wrap: break-word; /* This ensures that long words or URLs are wrapped and not overflow outside the tweet box */
 }
 
 .tweet::placeholder {
-  font-weight: bold;
+  font-weight: bold; /* This sets the font weight of the placeholder text inside the tweet to bold */
 }
 
 
 .tweet-actions {
-  color: #4056A1;
+  color: #4056A1; /* This sets the color of the tweet actions (e.g., like, reply) to #4056A1 */
 }
 
 .tweet-content {
-
-  border-bottom: 2px solid black;
-  /* add line at the bottom of tweet in the tweet content */
-
+  border-bottom: 2px solid black; /* This adds a bottom border with a thickness of 2px to the tweet content */
 }
 
 .tweet .username {
-  margin-left: 5px;
+  margin-top: 5px; /* This adds a top margin of 5px to the username inside the tweet */
+  margin-left: 5px; /* This adds a left margin of 5px to the username inside the tweet */
 }
 
 .tweet-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* This sets the display property of the tweet-header to flex */
+  justify-content: space-between; /* This evenly distributes the items inside the tweet-header horizontally */
+  align-items: center; /* This vertically aligns the items inside the tweet-header to the center */
 }
 
 .tweet .icon-container {
-
-  display: flex;
-  align-items: center;
+  display: flex; /* This sets the display property of the icon-container to flex */
+  align-items: center; /* This vertically aligns the items inside the icon-container to the center */
 }
 
 .tweet .tweet-header img {
-  width: 30px;
-  height: 30px;
-  border: 30px;
-  border-radius: 50%;
+  width: 30px; /* This sets the width of the image inside the tweet-header to 30px */
+  height: 30px; /* This sets the height of the image inside the tweet-header to 30px */
+  border: 30px; /* This sets the border size of the image inside the tweet-header to 30px */
+  border-radius: 50%; /* This adds a border-radius of 50% to make the image inside the tweet-header circular */
 }
 
 .tweet-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  display: flex; /* This sets the display property of the tweet-footer to flex */
+  justify-content: space-between; /* This evenly distributes the items inside the tweet-footer horizontally */
+  margin-top: 10px; /* This adds a top margin of 10px to the tweet-footer */
 }
 
 .tweet:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* This adds a box-shadow effect to the tweet when hovered */
 }
 
 .tweet .fa:hover {
-  color: #b8c338;
+  color: #b8c338; /* This sets the color of the Font Awesome icon inside the tweet to #b8c338 when hovered */
 }
 
 .error-container {
-  color: red;
-  margin: 5px 0;
-  font-weight: bold;
-  font-size: 1.1em;
+  color: red; /* This sets the color of the error container text to red */
+  margin: 5px 0; /* This adds a margin of 5px on the top and bottom of the error container */
+  font-weight: bold; /* This sets the font weight of the error container text to bold */
+  font-size: 1.1em; /* This sets the font size of the error container text to 1.1em */
 }

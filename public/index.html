@@ -6,11 +6,12 @@
   
   <!-- Meta Information -->
   <meta charset="UTF-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,21 +55,23 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-  <section class="new-tweet">
-    <form action="/tweets" method="POST">
-      <textarea name="text" placeholder="What are you humming about?" class="tweet" id="tweet-text"></textarea>
-      <div>
-        <button type="submit">Tweet</button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
+  <div class="main-container">
+    <section class="new-tweet">
+      <form action="/tweets" method="POST">
+        <textarea name="text" placeholder="What are you humming about?" class="tweet" id="tweet-text"></textarea>
+        <div class="submit-and-counter">
+          <button type="submit">Tweet</button>
+          <div class="counter">140</div>
+        </div>
+      </form>
+      <div class="error-container" style="display: none;">
+        <span class="error-message"></span>
       </div>
-    </form>
-    <div class="error-container" style="display: none;">
-      <span class="error-message"></span>
-    </div>
-  </section>
+    </section>
 
-  <section id="tweets-container">
-    <!-- Here we'll dynamically append our tweets -->
-  </section>
+    <section id="tweets-container">
+      <!-- Here we'll dynamically append our tweets -->
+    </section>
+  </div> <!-- Closing tag for main-container -->
 </body>
 </html>

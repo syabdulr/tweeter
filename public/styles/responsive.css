@@ -1,64 +1,99 @@
 /* Responsive.css */
 
+/* Desktop */
+@media (min-width: 1024px) {
+
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* This aligns the items vertically in the center of the body */
+    justify-content: space-evenly; /* This provides equal spacing between the new-tweet section and the tweets-container */
+  }
+
+  .main-container {
+    margin-top: 7.5rem; /* This creates a top margin of 7.5rem */
+    width: 60%; /* This sets the width of the main-container to 60% of its parent container */
+    justify-content: space-between; /* This evenly distributes the items inside the main-container */
+  }
+
+  header {
+    height: 25rem; /* This sets the height of the header to 25rem */
+    width: 30%; /* This sets the width of the header to 30% of its parent container */
+    margin-top: -350px;
+  }
+}
+
 /* Mobile */
-@media (max-width: 48rem) { /* 767px is typically 48rem, if the default root font-size is 16px */
+@media (max-width: 1024px) {
+
+  header {
+    margin-top: 120px;
+  }
+
+  /* 767px is typically 48rem, if the default root font-size is 16px */
   nav {
-    background-color: #c29200;
-    padding: 0 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
-    height: 3.75rem; /* reducing the height on mobile */
+    background-color: #c29200; /* This sets the background color of the navigation bar to #c29200 */
   }
+
   nav span {
-    text-align: center;
-    font-size: 1.25rem; /* reducing the font size on mobile */
+    text-align: center; /* This centers the text inside the navigation bar */
+    font-size: 1.25rem; /* This sets the font size of the navigation bar text to 1.25rem */
   }
+
   .right-content {
-    margin-top: 1.5rem;
-    flex-direction: column;
-    align-items: center; /* centering the content on mobile */
+    margin-top: 1.5rem; /* This adds a top margin of 1.5rem to the right-content */
+    flex-direction: column; /* This changes the direction of flex items to a column */
+    align-items: center; /* This centers the flex items horizontally inside the right-content */
   }
+
   .fa-angle-double-down {
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: 1rem; /* reducing the font size on mobile */
+    margin-right: 0; /* This removes the right margin of the fa-angle-double-down icon */
+    margin-bottom: 1rem; /* This adds a bottom margin of 1rem to the fa-angle-double-down icon */
+    font-size: 1rem; /* This sets the font size of the fa-angle-double-down icon to 1rem */
   }
-  .new-tweet, #tweets-container {
-    max-width: 100%;
-    padding: 0 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
-    flex-direction: column;
+
+  .new-tweet,
+  #tweets-container {
+    max-width: 100%; /* This sets the maximum width of the new-tweet and tweets-container to 100% */
+    padding: 0 0.625rem; /* This adds horizontal padding of 0.625rem to the new-tweet and tweets-container */
+    flex-direction: column; /* This changes the direction of flex items to a column */
   }
+
   .prompt-tweet {
-    margin-bottom: 0.625rem; /* 10px is typically 0.625rem, if the default root font-size is 16px */
+    margin-bottom: 0.625rem; /* This adds a bottom margin of 0.625rem to the prompt-tweet */
   }
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .new-tweet, #tweets-container {
-    padding: 0 15px; /* Adjust the side padding */
+
+  .new-tweet,
+  #tweets-container {
+    padding: 0 15px; /* This adds horizontal padding of 15px to the new-tweet and tweets-container */
   }
 }
 
-
 /* CSS Adjustments for better responsiveness */
-.new-tweet form, .tweet-footer {
-  justify-content: space-between; 
-  flex-wrap: wrap; /* Allow items to wrap to a new line if there isn't enough space */
+.new-tweet form,
+.tweet-footer {
+  justify-content: space-between; /* This evenly distributes the items inside the new-tweet form and tweet-footer */
+  flex-wrap: wrap; /* This allows items to wrap to a new line if there isn't enough space */
 }
 
-.new-tweet button[type="submit"], .tweet-footer .tweet-actions {
-  margin-top: 10px; /* Provide some vertical space when items wrap to a new line */
+.new-tweet button[type="submit"],
+.tweet-footer .tweet-actions {
+  margin-top: 10px; /* This adds a top margin of 10px to the submit button and tweet-actions */
 }
 
-.tweet .icon-container, .tweet-footer {
-  align-items: flex-start; /* Align items to the start of their container to prevent vertical misalignment */
+.tweet .icon-container,
+.tweet-footer {
+  align-items: flex-start; /* This aligns the items to the start of their container to prevent vertical misalignment */
 }
 
 .tweet .icon-container img {
-  margin-right: 10px; /* Provide some horizontal space between image and username */
+  margin-right: 10px; /* This adds a right margin of 10px to the image inside the icon-container */
 }
 
 .tweet-content {
-  margin-bottom: 10px; /* Provide some vertical space between content and footer */
+  margin-bottom: 10px; /* This adds a bottom margin of 10px to the tweet-content */
 }
-
-

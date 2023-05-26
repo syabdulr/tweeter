@@ -1,27 +1,41 @@
-// Initialize when document is ready
+// Once the document is ready, this code runs.
 $(document).ready(() => {
-  // Load tweets when the page loads
+  // This function loads existing tweets from the server.
   loadTweets();
-  // Handle form submission events
+  // Event listener to handle form submission (tweet creation).
   $('form').on('submit', handleFormSubmission);
+
+  // Event listener for clicking the double arrow, which triggers a scroll action.
+  $('.fa-angle-double-down').on('click', function () {
+    // Scrolls the view to the new tweet section smoothly.
+    $('html, body').animate({
+      scrollTop: $(".new-tweet").offset().top
+    }, 'slow');
+  });
 });
 
-// Handle form submission
-const handleFormSubmission = function(event) {
+// Handles form submission events.
+const handleFormSubmission = function (event) {
+  // Prevents the default form submission action.
   event.preventDefault();
+
+  // Gets the textarea input from the form.
   const textarea = $(this).find("textarea");
+  // Validates the content of the textarea.
   const errorMessage = validateTextArea(textarea.val());
-  
+
+  // If there's an error, shows the error and ends the function.
   if (errorMessage) {
     showError(errorMessage);
     return;
   }
 
+  // If there's no error, submits the tweet.
   submitTweet(textarea);
 };
 
-// Validate text area input
-const validateTextArea = function(text) {
+// Checks if the text in the textarea is valid (has content and is not too long).
+const validateTextArea = function (text) {
   if (text.length < 1) {
     return "Need to have characters!";
   }
@@ -33,45 +47,51 @@ const validateTextArea = function(text) {
   return null;
 };
 
-// Show error message
-const showError = function(message) {
-  $('.error-container').slideUp('fast', function() {
+// Shows error messages.
+const showError = function (message) {
+  // Hides the error container fast, changes the error message, then shows the container fast.
+  $('.error-container').slideUp('fast', function () {
     $('.error-message').text(message);
     $('.error-container').slideDown('fast');
   });
 };
 
-// Submit tweet via AJAX
-const submitTweet = function(textarea) {
+// Sends the tweet to the server.
+const submitTweet = function (textarea) {
+  // Serializes the textarea content to be sent to the server.
   const formData = $(textarea).serialize();
-  
+
+  // AJAX request to send the data to the server.
   $.ajax({
     url: '/tweets',
     method: 'POST',
     data: formData,
     success: () => {
-      console.log('Data successfully sent to the server!');
+      // Reloads tweets and clears the textarea after successful submission.
       loadTweets();
       $(textarea).val('');
     },
     error: () => {
+      // Logs an error message in the console if the submission fails.
       console.log('Error occurred while sending data to the server!');
     }
   });
 };
 
-// Escape special characters in text
+// Escapes HTML characters to prevent XSS attacks.
 const escape = str => {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-// Create a tweet element from tweet data
-const createTweetElement = function(tweetData) {
+// Creates a tweet element with the provided data.
+const createTweetElement = function (tweetData) {
   const { avatars, name, handle } = tweetData.user;
   const { text } = tweetData.content;
   const createdAt = timeago.format(tweetData.created_at);
+
+  // Escapes the text of the tweet.
   const escapedText = escape(text);
 
   return $(`
@@ -96,21 +116,26 @@ const createTweetElement = function(tweetData) {
   `);
 };
 
-// Render tweets on the page
-const renderTweets = function(tweets) {
+// Renders all tweets to the tweets container.
+const renderTweets = function (tweets) {
+  // Clears the tweet container.
   $('#tweets-container').empty();
+  // Appends each tweet to the tweet container in reverse order (newest first).
   tweets.reverse().forEach(tweet => $('#tweets-container').append(createTweetElement(tweet)));
 };
 
-// Load tweets from the server
-const loadTweets = function() {
+// Fetches tweets from the server.
+const loadTweets = function () {
+  // AJAX request to fetch the tweets.
   $.ajax({
     url: '/tweets',
     method: 'GET',
-    success: function(data) {
+    success: function (data) {
+      // Renders the fetched tweets.
       renderTweets(data);
     },
-    error: function() {
+    error: function () {
+      // Logs an error message in the console if the fetch fails.
       console.log('Error occurred while fetching tweets from the server!');
     }
   });

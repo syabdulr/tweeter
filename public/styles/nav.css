@@ -3,38 +3,50 @@
 /* Website Display */
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 7.5rem; /* 120px is typically 7.5rem, if the default root font-size is 16px */
-  width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  padding: 0 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed; /* This sets the position of the nav bar to fixed */
+  top: 0; /* This positions the nav bar at the top of the page */
+  left: 0; /* This positions the nav bar at the left of the page */
+  height: 7.5rem; /* This sets the height of the nav bar to 7.5rem */
+  width: 100%; /* This sets the width of the nav bar to 100% */
+  background-color: #4056A1; /* This sets the background color of the nav bar to #4056A1 */
+  color: #FFFFFF; /* This sets the color of the text inside the nav bar to white */
+  padding: 0 1.5em; /* This adds horizontal padding of 1.5em to the nav bar */
+  display: flex; /* This sets the display property of the nav bar to flex */
+  align-items: center; /* This centers the items vertically inside the nav bar */
+  justify-content: space-between; /* This evenly distributes the items inside the nav bar horizontally */
 }
 
 nav span {
-  font-family: "Bungee", sans-serif;
-  font-size: 1.5rem; /* 24px is typically 1.5rem, if the default root font-size is 16px */
+  font-family: "Bungee", sans-serif; /* This sets the font family of the text inside the nav bar to "Bungee" */
+  font-size: 1.5rem; /* This sets the font size of the text inside the nav bar to 1.5rem */
 }
 
 .right-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  display: flex; /* This sets the display property of the right-content to flex */
+  flex-direction: column; /* This sets the flex direction of the right-content to column */
+  align-items: flex-end; /* This aligns the items inside the right-content to the end (right) */
 }
 
 .prompt-tweet {
-  font-family: "Source Sans Pro";
-  margin-bottom: 0.3125rem; /* 5px is typically 0.3125rem, if the default root font-size is 16px */
+  font-family: "Source Sans Pro"; /* This sets the font family of the prompt-tweet text */
+  margin-bottom: 0.3125rem; /* This adds a bottom margin of 0.3125rem to the prompt-tweet */
 }
 
 .fa-angle-double-down {
-  font-size: 1.5rem;  
-  color: red;
-  margin-right: 4.25rem;  
+  font-size: 1.5rem; /* This sets the font size of the fa-angle-double-down icon to 1.5rem */
+  color: red; /* This sets the color of the fa-angle-double-down icon to red */
+  margin-right: 4.25rem; /* This adds a right margin of 4.25rem to the fa-angle-double-down icon */
+  animation: moveUpDown 2s linear infinite; 
+  /* This applies the moveUpDown animation to the fa-angle-double-down icon */
 }
 
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0); 
+    /* This sets the vertical translation of the fa-angle-double-down icon to 0 */
+  }
+  50% {
+    transform: translateY(10px); 
+    /* This sets the vertical translation of the fa-angle-double-down icon to 10px */
+  }
+}

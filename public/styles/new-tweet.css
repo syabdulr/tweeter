@@ -1,66 +1,76 @@
 /* New Tweet */
 
 .tweet {
-  background-color: #f2f2f2;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: #f2f2f2; /* This sets the background color of the tweet to #f2f2f2 */
+  margin-left: 10px; /* This adds a left margin of 10px to the tweet */
+  margin-right: 10px; /* This adds a right margin of 10px to the tweet */
 }
 
 .new-tweet {
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* This adds a bottom margin of 5px to the new-tweet section */
 }
 
 .new-tweet h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 24px; /* This sets the font size of the h2 inside the new-tweet section to 24px */
+  margin-bottom: 10px; /* This adds a bottom margin of 10px to the h2 inside the new-tweet section */
 }
 
 .new-tweet form {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* This sets the display property of the form inside the new-tweet section to flex */
+  flex-direction: column; /* This sets the flex direction of the form to column */
 }
 
 .new-tweet label {
-  font-weight: bold;
-  font-size: 15px;
-  margin-bottom: 5px;
+  font-weight: bold; /* This sets the font weight of the label inside the new-tweet section to bold */
+  font-size: 15px; /* This sets the font size of the label inside the new-tweet section to 15px */
+  margin-bottom: 5px; /* This adds a bottom margin of 5px to the label inside the new-tweet section */
 }
 
 .new-tweet textarea {
-  margin-top: 25px;
-  height: 40px;
-  margin-bottom: 10px;
-  border: none;
-  border-bottom: 2px solid black;
-  resize: none;
-  font-size: 16px;
-  background-color: transparent;
+  margin-top: 25px; /* This adds a top margin of 25px to the textarea inside the new-tweet section */
+  height: 40px; /* This sets the height of the textarea inside the new-tweet section to 40px */
+  margin-bottom: 10px; /* This adds a bottom margin of 10px to the textarea inside the new-tweet section */
+  border: none; /* This removes the border of the textarea */
+  border-bottom: 2px solid black; /* This adds a bottom border with a thickness of 2px to the textarea */
+  resize: none; /* This prevents the textarea from being resizable by the user */
+  font-size: 16px; /* This sets the font size of the textarea inside the new-tweet section to 16px */
+  background-color: transparent; /* This sets the background color of the textarea to transparent */
 }
 
 .new-tweet button[type="submit"] {
-  background-color: #4056A1;
-  color: white;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: "Bungee", sans-serif;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: #4056A1; /* This sets the background color of the submit button to #4056A1 */
+  color: white; /* This sets the color of the submit button text to white */
+  border: none; /* This removes the border of the submit button */
+  font-size: 14px; /* This sets the font size of the submit button text to 14px */
+  cursor: pointer; /* This sets the cursor style to a pointer when hovering over the submit button */
+  font-family: "Bungee", sans-serif; /* This sets the font family of the submit button text to "Bungee" */
+  margin-left: 10px; /* This adds a left margin of 10px to the submit button */
+  margin-right: 10px; /* This adds a right margin of 10px to the submit button */
 }
 
 .new-tweet button[type="submit"]:hover {
-  font-family: "Bungee", sans-serif;
-  background-color: #4056A1;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-family: "Bungee", sans-serif; 
+  /* This sets the font family of the submit button text to "Bungee" when hovered */
+  background-color: #4056A1; 
+  /* This sets the background color of the submit button to #4056A1 when hovered */
+  margin-left: 10px; /* This adds a left margin of 10px to the submit button when hovered */
+  margin-right: 10px; /* This adds a right margin of 10px to the submit button when hovered */
+}
+
+/* This is the new flex container for the submit button and the counter */
+.new-tweet .submit-and-counter {
+  display: flex; /* This sets the display property of the submit-and-counter container to flex */
+  justify-content: space-between; /* This evenly distributes the items inside the submit-and-counter container horizontally */
+  align-items: center; /* This ensures vertical alignment of the items inside the submit-and-counter container */
 }
 
 .new-tweet .counter {
-  font-size: 14px;
-  color: #999;
-  margin-top: 5px;
+  font-family: "Bungee", sans-serif; /* This sets the font family of the counter text to "Bungee" */
+  font-size: 14px; /* This sets the font size of the counter text to 14px */
+  color: #333; /* This sets the color of the counter text to #333 */
+  margin-left: 5px; /* This adds a left margin of 5px to the counter */
 }
 
 .new-tweet .counter.invalid {
-  color: red;
+  color: red; /* This sets the color of the counter text to red when it's marked as invalid */
 }
