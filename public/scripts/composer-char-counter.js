@@ -4,13 +4,13 @@ $(document).ready(function () {
   $('#tweet-text').on('input', function () {
     // Attaches an event listener to the input event of the element with ID "tweet-text"
 
-    let inputLength = $(this).val().length;
+    const inputLength = $(this).val().length;
     // Stores the length of the value entered in the "tweet-text" input field
 
-    let remainingChars = 140 - inputLength;
+    const remainingChars = 140 - inputLength;
     // Calculates the number of characters remaining by subtracting "inputLength" from 140
 
-    let counter = $(this).closest('form').find('.counter');
+    const counter = $(this).closest('form').find('.counter');
     // Selects the element with class "counter" which is a descendant of the closest form element to "tweet-text"
 
     counter.text(remainingChars);

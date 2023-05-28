@@ -5,13 +5,7 @@ $(document).ready(() => {
   // Event listener to handle form submission (tweet creation).
   $('form').on('submit', handleFormSubmission);
 
-  // Event listener for clicking the double arrow, which triggers a scroll action.
-  $('.fa-angle-double-down').on('click', function () {
-    // Scrolls the view to the new tweet section smoothly.
-    $('html, body').animate({
-      scrollTop: $(".new-tweet").offset().top
-    }, 'slow');
-  });
+
 });
 
 // Handles form submission events.
@@ -70,10 +64,15 @@ const submitTweet = function (textarea) {
       // Reloads tweets and clears the textarea after successful submission.
       loadTweets();
       $(textarea).val('');
+      
+      // Reset the counter
+      const counter = $(textarea).closest('form').find('.counter');
+      counter.text(140);
+      counter.removeClass('invalid');
     },
     error: () => {
-      // Logs an error message in the console if the submission fails.
-      console.log('Error occurred while sending data to the server!');
+      // Show error to user
+      showError('Error occurred while sending data to the server!');
     }
   });
 };
@@ -135,8 +134,8 @@ const loadTweets = function () {
       renderTweets(data);
     },
     error: function () {
-      // Logs an error message in the console if the fetch fails.
-      console.log('Error occurred while fetching tweets from the server!');
+      // Show error to user
+      showError('Error occurred while fetching tweets from the server!');
     }
   });
 };
