@@ -2,97 +2,110 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  /* The body style applies to the whole page */
   body {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Align items at the start of the container */
-    justify-content: space-evenly;
-    height: 100vh; /* You may need to set the height to ensure the main container has room to scroll */
-    overflow: hidden; /* Disalbe scrolling everywhere but the .main-container */
+    display: flex; /* Use a flexible box layout */
+    flex-direction: row; /* Arrange the body's child elements in a row */
+    align-items: flex-start; /* Align child elements to the start of the body's cross axis */
+    justify-content: space-evenly; /* Distribute the body's child elements evenly */
+    height: 100vh; /* Make the body as high as the viewport */
+    overflow: hidden; /* Prevent scrolling on the body */
   }
 
+  /* .main-container style applies to the main content container */
   .main-container {
-    margin-top: 7.5rem;
-    width: 60%;
-    justify-content: space-between;
-    height: 100%; /* Ensure the main-container has enough height */
-    overflow-y: auto; /* Add scrolling if necessary */
+    margin-top: 7.5rem; /* Add a top margin */
+    width: 60%; /* Set the width of the container */
+    justify-content: space-between; /* Distribute child elements with space between them */
+    height: 100%; /* Make the container fill its parent's height */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
   }
 
+  /* header style applies to the page header */
   header {
-    align-items: center;
-    position: sticky;
-    top: 0;
-    height: 25rem;
-    width: 30%;
-    margin-top: 10rem;
-    overflow: hidden; /* Disable scrolling entirely */
+    align-items: center; /* Center child elements along the cross axis */
+    position: sticky; /* Make the header stick at the top of the viewport */
+    top: 0; /* Align the top of the header with the top of the viewport */
+    height: 25rem; /* Set a fixed height for the header */
+    width: 30%; /* Set a fixed width for the header */
+    margin-top: 10rem; /* Add a top margin */
+    overflow: hidden; /* Prevent scrolling inside the header */
   }
 }
 
-
-
 /* Mobile and Tablet */
 @media (max-width: 1023px) {
+  /* Adjust the header for mobile and tablet views */
   header {
-    margin-top: 120px;
+    margin-top: 120px; /* Add a top margin */
   }
 
+  /* Adjust the navigation bar for mobile and tablet views */
   nav {
-    background-color: #c29200; 
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); 
+    background-color: #c29200; /* Set a solid background color */
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); /* Add a background texture image */
   }
 
+  /* Style the text inside the navigation bar */
   nav span {
-    text-align: center;
-    font-size: 1.25rem;
+    text-align: center; /* Center the text */
+    font-size: 1.25rem; /* Set the text size */
   }
 
+  /* Adjust the right content area for mobile and tablet views */
   .right-content {
-    margin-top: 1.5rem;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 1.5rem; /* Add a top margin */
+    flex-direction: column; /* Arrange child elements in a column */
+    align-items: center; /* Center child elements horizontally */
   }
 
+  /* Adjust the double down arrow icon for mobile and tablet views */
   .fa-angle-double-down {
-    margin-right: 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    margin-right: 0; /* Remove the right margin */
+    margin-bottom: 1rem; /* Add a bottom margin */
+    font-size: 1rem; /* Set the icon size */
   }
 
+  /* Adjust the tweet creation form and tweet container for mobile and tablet views */
   .new-tweet,
   #tweets-container {
-    max-width: 100%;
-    padding: 0 15px;
-    flex-direction: column;
+    max-width: 100%; /* Make these elements fill their parent's width */
+    padding: 0 15px; /* Add some horizontal padding */
+    flex-direction: column; /* Arrange child elements in a column */
   }
 
+  /* Adjust the tweet prompt for mobile and tablet views */
   .prompt-tweet {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.625rem; /* Add a bottom margin */
   }
 }
 
 /* CSS Adjustments for better responsiveness */
+/* These styles apply to the form in .new-tweet and the .tweet-footer */
 .new-tweet form,
 .tweet-footer {
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute child elements with space between them */
+  flex-wrap: wrap; /* Wrap child elements to a new line if there isn't enough space */
 }
 
+/* These styles apply to the submit button in .new-tweet and the actions in .tweet-footer */
 .new-tweet button[type="submit"],
 .tweet-footer .tweet-actions {
-  margin-top: 10px;
+  margin-top: 10px; /* Add a top margin */
 }
 
+/* These styles apply to the icon container in .tweet and the .tweet-footer */
 .tweet .icon-container,
 .tweet-footer {
-  align-items: flex-start;
+  align-items: flex-start; /* Align child elements to the start of the cross axis */
 }
 
+/* This style applies to the image in the .tweet .icon-container */
 .tweet .icon-container img {
-  margin-right: 10px;
+  margin-right: 10px; /* Add a right margin */
 }
 
+/* This style applies to .tweet-content */
 .tweet-content {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Add a bottom margin */
 }
