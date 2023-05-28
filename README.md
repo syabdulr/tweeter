@@ -35,6 +35,11 @@ Below is an example of how the tweets would look like in desktop view.
 
 ![image](https://github.com/syabdulr/tweeter/blob/master/public/images/example.png?raw=true)
 
+Here is an example of how it would look in mobile view.
+
+![image](https://github.com/syabdulr/tweeter/blob/master/public/images/example3.png?raw=true)
+
+
 
 ## Explanation of styling
 
